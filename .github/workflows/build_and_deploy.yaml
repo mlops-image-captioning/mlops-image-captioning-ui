@@ -28,6 +28,6 @@ jobs:
         with:
           context: "{{defaultContext}}"
           push: true
-          tags: mlops-image-captioning/mlops-image-captioning-ui:latest
+          tags: ${{ secrets.DOCKER_REGISTRY }}/mlops-image-captioning/mlops-image-captioning-ui:latest
           cache-from: type=registry,ref=mlops-image-captioning/mlops-image-captioning-ui:buildcache
           cache-to: type=registry,ref=mlops-image-captioning/mlops-image-captioning-ui:buildcache,mode=max
