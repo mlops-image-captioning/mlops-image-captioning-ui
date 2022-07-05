@@ -26,8 +26,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: "{{defaultContext}}"
           push: true
           tags: mlops-image-captioning/mlops-image-captioning-ui:latest
-          cache-from: type=registry,ref=user/app:buildcache
-          cache-to: type=registry,ref=user/app:buildcache,mode=max
+          cache-from: type=registry,ref=mlops-image-captioning/mlops-image-captioning-ui:buildcache
+          cache-to: type=registry,ref=mlops-image-captioning/mlops-image-captioning-ui:buildcache,mode=max
