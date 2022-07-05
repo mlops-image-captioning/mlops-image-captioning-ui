@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  app:
+    image: ghcr.io/mlops-image-captioning/mlops-image-captioning-ui:latest
+    ports:
+      - "80:8501"
+    # volumes:
+    #   - .:/code
